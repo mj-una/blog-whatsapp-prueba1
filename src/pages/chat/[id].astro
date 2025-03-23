@@ -26,7 +26,6 @@ const esGrupo = grupo.length !== 0;
 const miembros = esGrupo ? grupo.map(id => chats.find(ch => ch.id === id))
   : [chat, chats.find(ch => ch.id === 25025)];
 
-const esContacto = Boolean(chat.nombreContacto);
 const telefono = formatearTelefono(chat.numero);
 const nombreChat = esGrupo ? chat.nombre
   : chat.nombreContacto ?? telefono;

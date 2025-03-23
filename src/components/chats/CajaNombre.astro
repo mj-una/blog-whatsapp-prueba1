@@ -1,8 +1,9 @@
 ---
+import base from "../../utils/exportBase";
 import seleccionarArchivo from "../../utils/seleccionarArchivo";
 
 const { id, nombre } = Astro.props;
-const rutaAvatar = seleccionarArchivo("/avatar", id, "_default", "webp");
+const rutaAvatar = seleccionarArchivo(base + "/avatar", id, "_default", "webp");
 
 ---
 <!-- onerror="this.src = '/avatar/_default.webp'" -->
@@ -10,7 +11,7 @@ const rutaAvatar = seleccionarArchivo("/avatar", id, "_default", "webp");
 <!-- --ACS-- -->
 <div class="contenedor-caja-nombre">
   <div class="caja-nombre">
-    <a class="boton-atras" href="/">ᗕ</a>
+    <a class="boton-atras" href={`${base}`}>ᗕ</a>
     <img class="avatar"
       src={rutaAvatar}
       alt="Imagen de perfil"
