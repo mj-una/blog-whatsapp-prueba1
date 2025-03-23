@@ -1,0 +1,1 @@
+export default base = "/blog-whatsapp-prueba1";
