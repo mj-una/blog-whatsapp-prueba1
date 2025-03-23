@@ -1,1 +1,2 @@
-export default base = "/blog-whatsapp-prueba1";
+const base = "/blog-whatsapp-prueba1";
+export default base;

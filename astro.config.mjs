@@ -5,6 +5,6 @@ import { defineConfig } from "astro/config";
 export default defineConfig({
 	output: "static",
   site: "https://mj-una.github.io",
-  base: "blog-whatsapp-prueba1",
+  base: "/blog-whatsapp-prueba1",
 	trailingSlash: "always",
 })
