@@ -2,7 +2,7 @@
 import base from "../../utils/exportBase";
 
 const { id, nombre } = Astro.props;
-const rutaAvatar = base + "/avatar" + id + "webp";
+const rutaAvatar = base + "/avatar/" + id + ".webp";
 
 ---
  
@@ -13,7 +13,7 @@ const rutaAvatar = base + "/avatar" + id + "webp";
     <img class="avatar"
       src={rutaAvatar}
       alt="Imagen de perfil"
-      onerror="this.src = '/avatar/_default.webp'; this.onerror='';"
+      onerror={`this.src = ${base}'/avatar/_default.webp'; this.onerror='';`}
     />
     <h3 class="nombre">
       {nombre}
