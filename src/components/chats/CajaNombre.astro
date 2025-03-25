@@ -24,9 +24,7 @@ const logs = seleccionarArchivoLog(base + "/avatar", id, "_default", "webp");
   </div>
   
   <div id="popup" class="popup">
-    {logs.map(log => (`
-
-${log}`))}
+    {logs.map(log => log)}
   </div>
 </div>
 
