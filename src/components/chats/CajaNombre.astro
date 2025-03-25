@@ -1,9 +1,9 @@
 ---
+import Logs from "./Logs.astro";
+
 import base from "../../utils/exportBase";
 import seleccionarArchivo from "../../utils/seleccionarArchivo";
 import seleccionarArchivoLog from "../../utils/seleccionarArchivoLog";
-
-import LogDbg from "./LogDbg.astro";
 
 const { id, nombre } = Astro.props;
 const rutaAvatar = seleccionarArchivo(base + "/avatar", id, "_default", "webp");
@@ -23,7 +23,7 @@ const logs = seleccionarArchivoLog(base + "/avatar", id, "_default", "webp");
       {nombre}
     </h3>
   </div>
-  <LogDbg client:load logs={logs} />
+  <Logs client:load logs={logs} />
 </div>
 
 <!-- --CCS-- -->
